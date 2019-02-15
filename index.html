@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Watch Vault</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="shortcut icon" href="assets/img/logowatch.png" type="image/x-icon"/>
+    <link rel="icon" href="assets/img/logowatch.png" type="image/x-icon"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand animated zoomIn delay-1s" href="#">WATCH VAULT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item active">
+              <a class="nav-link animated fadeInLeft delay-1s" href="#accueil">Accueil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link animated fadeInLeft delay-1s" href="#men">Homme</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link animated fadeInDown delay-1s" href="#women">Femme</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link animated fadeInRight delay-1s" href="#kid">Enfants</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link animated fadeInRight delay-1s" href="#geek">Geek</a>
+            </li>
+            <li class="nav-item">
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <!-- Tableau dans le modal -->
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Article</th>
+                          <th>Prix</th>
+                          <th>Quantité</th>
+                          <th>Sous-total</th>
+                        </tr>
+                      </thead>
+                      <tbody id="cart-tablebody"> <!-- Div pour écrire -->
+                      </tbody>
+                    </table>
+                    <!--<input type="Number" name="amount" id="amount" min="1" /><p>Unités</p> Quantité -->
+                    <p>Sous total : <div class="subtotal"></div>€</p>
+                    <button id="confirm-command">Passer la commande</button>
+                    <!-- Fin du tableau dans le modal -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" id="removeProduct" data-dismiss="modal">Supprimer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Panier
+              </button>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+    <h1 class="titre method-2">Vous n'etes pas a l'abri de trouver votre montre au meilleur prix</h1>
+<!-- Début section principale page accueil -->
+  <section class="mainPage" id="mainPage">
+    <div class="container-fluid pad">       <!-- ATTENTION MODIF -->
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 pad">
+          <div class="card border-white pad">   <!-- ATTENTION MODIF ajout pad1-->
+            <figure>
+              <figcaption class="animated fadeInLeft delay-1s">Montres Homme</figcaption>
+              <br>
+              <a href="#men" class="menshow"><img src="assets/img/mainpageH.jpeg" class="mainImg animated pulse delay-1s" alt="..."></a>
+            </figure>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 pad">
+          <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+            <figure>
+              <figcaption class="animated fadeInRight delay-1s">Montres Femme</figcaption>
+              <br>
+              <a href="#women" class="womenshow"><img src="assets/img/mainpageF.jpg" class="mainImg animated pulse delay-1s" alt="..."></a>
+            </figure>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 pad">
+          <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+            <figure>
+              <figcaption class="animated fadeInLeft delay-1s">Montres Enfants</figcaption>
+              <br>
+              <a href="#kid" class="kidshow"><img src="assets/img/mainpageE.jpg" class="mainImg animated pulse delay-1s" alt="..."></a>
+            </figure>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 pad">
+          <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+            <figure>
+              <figcaption class="animated fadeInRight delay-1s">Montres Geek</figcaption>
+              <br>
+              <a href="#geek" class="geekshow"><img src="assets/img/mainpageG.jpg" class="mainImg animated pulse delay-1s" alt="..."></a>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Fin section principale page accueil -->
+<!-- Début section Homme -->
+<section class="men" id="men">
+  <div class="container-fluid pad1">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 offset-md-1 offset-lg-1 offset-xl-1 test">
+        <div class="row">
+          <div class="col-sm-12 col-md-3 col-lg-2">
+            <div class="card border-white pad zoom">   <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchH1.jpg" class="card-img-top image" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Seiko RG05</h5>
+                <p class="description">Nouvelle montre de la marque, simple et chic</p>
+                <p class="ref">ref : 085412</p>
+                <p class="price">199 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="Seiko RG05" data-price="199">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchH2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Seiko S58</h5>
+                <p class="description"> Montre de la collection hiver de seiko</p>
+                <p class="ref">ref : 719523</p>
+                <p class="price">49 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="Seiko S58" data-price="49">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchH3.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Seiko T86</h5>
+                <p class="description">Une montre en argent, chic et classe</p>
+                <p class="ref">ref : 458695</p>
+                <p class="price">499 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="Seiko T86" data-price="499">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchH4.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Seiko EZ75</h5>
+                <p class="description">La montre pour tout les voyageurs</p>
+                <p class="ref">ref : 872635</p>
+                <p class="price">129 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="SEIKO EZ75" data-price="129">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchH5.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Seiko Y56</h5>
+                <p class="description">La montre pour les sportif qui veulent être chic.</p>
+                <p class="ref">ref : 782635</p>
+                <p class="price">49 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="Fossil Y56" data-price="49">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Début de la section femme-->
+</section>
+<section class="women" id="women">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 offset-md-1 offset-lg-1 offset-xl-1 test">
+        <div class="row">
+          <div class="col-sm-12 col-md-3 col-lg-2">
+            <div class="card border-white pad">
+              <img src="assets/img/watchF1.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Fossil G45</h5>
+                <p class="description">Fossil vous présente cette montre plaqué or</p>
+                <p class="ref">ref : 984502</p>
+                <p class="price">79 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="Fossil G45" data-price="79">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">
+              <img src="assets/img/watchF2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Fossil T45</h5>
+                <p class="description">Montre avec bracelet cuir, élégante et chic</p>
+                <p class="ref">ref : 780542</p>
+                <p class="price">99 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="Fossil T45" data-price="99">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">
+              <img src="assets/img/watchF3.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Fossil A87</h5>
+                <p class="description">Une montre simple et chic pour toute les occasions</p>
+                <p class="ref">ref : 123578</p>
+                <p class="price">49 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="Fossil A87" data-price="49">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchF4.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Fossil Y45</h5>
+                <p class="description">Une montre connecté qui sait rester simple</p>
+                <p class="ref">ref : 086478</p>
+                <p class="price">89 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="Fossil Y45" data-price="89">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchF5.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Fossil B17</h5>
+                <p class="description">Une montre bleu qui saura vous mettre en valeur</p>
+                <p class="ref">ref : 654897</p>
+                <p class="price">149 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="Fossil B17" data-price="149">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Début partie enfant -->
+</section>
+<section class="kid" id="kid">
+  <div class="container-fluid pad1">       <!-- ATTENTION MODIF -->
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 offset-md-1 offset-lg-1 offset-xl-1 test">
+        <div class="row">
+          <div class="col-sm-12 col-md-3 col-lg-2">
+            <div class="card border-white pad">   <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchK1.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Swatch S78</h5>
+                <p class="description">Une montre connecté pour les plus petit</p>
+                <p class="ref">ref : 546582</p>
+                <p class="price">149 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="S78" data-price="149">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchK2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title fontt">Swatch X20</h5>
+                <p class="description">Une montre pour les amoureux des manettes</p>
+                <p class="ref">ref : 546824</p>
+                <p class="price">19 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="X20" data-price="19">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchK3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Swatch F25</h5>
+                <p class="description">Une montre pour tout les fan de foot</p>
+                <p class="ref">ref : 483257</p>
+                <p class="price">15 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="F25" data-price="15">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchK4.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Swatch A02</h5>
+                <p class="description">Une montre pour ceux qui aime les avions</p>
+                <p class="ref">ref : 64824</p>
+                <p class="price">19 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="A02" data-price="19">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchK5.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Swatch L78</h5>
+                <p class="description">Une montre connecté pour surveiller vos enfants</p>
+                <p class="ref">ref : 259631</p>
+                <p class="price">149 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="L78" data-price="149">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Début section GEEK -->
+<section class="geek" id="geek">
+  <div class="container-fluid pad1">       <!-- ATTENTION MODIF -->
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 offset-md-1 offset-lg-1 offset-xl-1 test">
+        <div class="row">
+          <div class="col-sm-12 col-md-3 col-lg-2">
+            <div class="card border-white pad">   <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchG1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Nintendo GB05</h5>
+                <p class="description">Une montre GameBoy pour les grands enfants</p>
+                <p class="ref">ref : 468154</p>
+                <p class="price">9 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="GB05" data-price="9">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchG2.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Binary B78</h5>
+                <p class="description">Une montre affichant l'heure en Binaire</p>
+                <p class="ref">ref : 782345</p>
+                <p class="price">39 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="B78" data-price="39">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchG3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Compass B03</h5>
+                <p class="description">Une montre ressemblant à une boussole</p>
+                <p class="ref">ref : 453674</p>
+                <p class="price">9 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="B03" data-price="9">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchG4.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Gamer G45</h5>
+                <p class="description">Une montre pour les gamers</p>
+                <p class="ref">ref : 123987</p>
+                <p class="price">14 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="G45" data-price="14">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 col-lg-2 ">
+            <div class="card border-white pad">  <!-- ATTENTION MODIF ajout pad1-->
+              <img src="assets/img/watchG5.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title font">Smiley S45</h5>
+                <p class="description">Une montre pour toujours avoir le sourire</p>
+                <p class="ref">ref : 985426</p>
+                <p class="price">14 €</p>
+              </div>
+              <div class="card-body bod">
+                <button type="button" class="add-to-cart add" data-name="S45" data-price="14">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="page-footer">
+  <div class="container-fluid">
+  </div>
+  <br>
+  <div class="container text-center text-md-left mt-5">
+    <div class="row mt-3 dark-grey-text">
+      <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+        <h6 class="text-uppercase font-weight-bold">Votre montre chez vous en 48h chrono</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px;">
+        <p><img src="assets/img/logowatch.png" class="img-responsive" alt="logo"></p>
+      </div>
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">Watch Vault</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px;">
+        <p>
+          <a class="dark-grey-text" href="#body">Accueil</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Aide</a>
+        </p>
+      </div>
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">Liens utiles</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px;">
+        <p>
+          <a class="dark-grey-text" href="#!">Votre Compte</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Livraison</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Conditions générales de ventes</a>
+        </p>
+        <p>Nos moyens de Paiements : </p>
+        <p>
+          <i class="fab fa-cc-visa fa-2x"></i>
+          <i class="fab fa-cc-mastercard fa-2x"></i>
+          <i class="fab fa-cc-paypal fa-2x"></i>
+        </p>
+      </div>
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <h6 class="text-uppercase font-weight-bold">Nous Contacter</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px;">
+        <p>
+          <i class="fa fa-home mr-3"></i> 60400 NOYON, Boulevard <br>Cambronne, France</p>
+          <p>
+            <i class="fa fa-envelope mr-3"></i><a href="mailto: "> info@Watch-Vault.com</a></p>
+            <p>
+              <i class="fa fa-phone mr-3"></i><a href="tel: "> + 03 234 666 69</a></p>
+              <p>
+                <i class="fa fa-print mr-3"></i><a href="tel: "> + 03 234 668 96</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright text-center text-black-50 py-3">
+            <a class="dark-grey-text" href="#">Mentions légales </a> © 2019 Copyright: <a class="dark-grey-text" href="#"> Watch-Vault.com</a>
+          </div>
+        </footer>
+        <!-- Footer -->
+</section>
+</div>
+  <script src="assets/Jquery/jquery-3.3.1.min.js"></script>
+  <script src="assets/Jquery/jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
