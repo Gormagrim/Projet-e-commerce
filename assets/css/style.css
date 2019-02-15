@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "clock";
+  src: url("../fonts/clock.otf");
+}
+body{
+  text-align: center;
+  font-family: "clock";
+  padding: 0;
+  margin: 0;
+  /* background-image: url("../img/bgvintage.jpg"); */
+}
+footer{
+  background-color: #F8F9FA;
+}
+.navbar{
+  padding: 20px 0;
+}
+.navbar-brand{
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #262626;
+}
+.nav-item{
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.activ .nav-link
+{
+  background: #262626;
+  color: #fff;
+}
+.navbar-light .navbar-nav .nav-item.activ .nav-link{
+  color: #262626;
+  padding: 5px 15px;
+}
+.nav-link{
+  font-size: 1.3em;
+}
+.pad1{
+  margin-top: 10%;
+}
+.pad{
+  margin-top: 2%;
+}
+.navbar-light .navbar-toggler{
+  border: none;
+  color: #fff;
+  border: 2px solid #7f7f7f;
+  outline: none;
+}
+navbar-collapse{
+  background: #fff;
+}
+.img-responsive{
+  width: 20%;
+}
+.card-img-top{
+  height: 18rem;
+  width: 15rem;
+}
+.mainImg{
+  height: 40rem;
+  width: 40rem;
+  border-radius: 200px;
+  border: 8px solid black;
+}
+.test{
+  margin-left: 15%;
+}
+.zoom {
+  height: 20rem;
+  width: 18rem;
+}
+.pad img {
+  /* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
+  -webkit-transition: all 1s ease; /* Safari et Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* Internet Explorer 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+.pad:hover img {
+  /* L'image est grossie de 25% */
+  -webkit-transform:scale(1.25); /* Safari et Chrome */
+  -moz-transform:scale(1.25); /* Firefox */
+  -ms-transform:scale(1.25); /* Internet Explorer 9 */
+  -o-transform:scale(1.25); /* Opera */
+  transform:scale(1.25);
+}
+figcaption{
+  font-size: 1.5rem;
+}
+.titre{
+  margin-top: 5%;
+  text-align: center;
+  color: black;
+}
+.method-2 {
+  display: inline-block;
+  background: url('https://s3.amazonaws.com/f.cl.ly/items/0A2z3P0k3C45013S0z1J/clip-bg.jpg') no-repeat;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0 rgba(0, 0, 0, 0.1);
+  background-size: 0 100%;
+  animation: fill-2 7s infinite;
+}
+@keyframes fill-2 {
+  50%   { background-size: 100% 100%; }
+  100%  { background-size: 0 100%;    }
+}
